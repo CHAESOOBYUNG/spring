@@ -1,0 +1,14 @@
+
+3월 16, 2022 09:44:46.121 NEW SESSION
+3월 16, 2022 09:44:46.121 [8440:17264:0316/094446.117:ERROR:device_event_log_impl.cc(214)] [09:44:46.117] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 16, 2022 10:16:44.368 [9740:16112:0316/101644.365:ERROR:device_event_log_impl.cc(214)] [10:16:44.365] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 16, 2022 10:16:56.961 [8332:15208:0316/101656.960:ERROR:device_event_log_impl.cc(214)] [10:16:56.960] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+3월 16, 2022 12:28:37.990 NEW SESSION
+3월 16, 2022 12:28:37.990 [6432:15684:0316/122837.987:ERROR:device_event_log_impl.cc(214)] [12:28:37.986] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 16, 2022 13:48:02.340 [6432:12620:0316/134802.340:ERROR:connection_factory_impl.cc(425)] Failed to connect to MCS endpoint with error -105
+3월 16, 2022 14:40:45.781 [6432:15684:0316/144045.779:ERROR:interface_endpoint_client.cc(659)] Message 1 rejected by interface blink.mojom.WidgetHost
+3월 16, 2022 15:14:14.763 [6432:15684:0316/151414.762:ERROR:device_event_log_impl.cc(214)] [15:14:14.762] USB: usb_service_win.cc:260 Failed to get device driver name: 요소가 없습니다. (0x490)
+3월 16, 2022 15:45:41.216 [7488:7536:0316/154541.213:ERROR:device_event_log_impl.cc(214)] [15:45:41.213] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 16, 2022 15:47:25.119 [1432:15996:0316/154725.118:ERROR:device_event_log_impl.cc(214)] [15:47:25.118] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 16, 2022 16:20:03.987 [10948:17232:0316/162003.987:ERROR:device_event_log_impl.cc(214)] [16:20:03.987] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)

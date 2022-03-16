@@ -1,0 +1,26 @@
+package ex03;
+
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class MainClass {
+	
+	public static void main(String[] args) {
+		/*
+		DatabaseDev dev = new DatabaseDev();
+		dev.setUid("....");
+		dev.setUrl(".......");
+		dev.setUpw("...");
+		*/
+		
+		GenericXmlApplicationContext ctx =
+				new GenericXmlApplicationContext("application-context.xml");
+		
+		DatabaseDev dev = ctx.getBean(DatabaseDev.class);
+		
+		System.out.println(dev.getUrl());
+		System.out.println(dev.getUid());
+		System.out.println(dev.getUpw());
+		
+	
+	}
+}

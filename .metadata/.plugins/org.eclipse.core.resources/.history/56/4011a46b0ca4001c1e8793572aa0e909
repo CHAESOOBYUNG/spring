@@ -1,0 +1,16 @@
+package ex05;
+
+public class Computer {
+
+	private Mouse mouse;
+	private Keyboard kb;
+	private Monitor monitor;
+	
+	public void computerInfo() {
+		System.out.println("***컴퓨터 정보***");
+		mouse.info();
+		kb.info();
+		monitor.info();
+	}
+	
+}

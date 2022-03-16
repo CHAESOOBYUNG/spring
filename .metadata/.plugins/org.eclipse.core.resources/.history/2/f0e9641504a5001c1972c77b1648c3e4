@@ -1,0 +1,17 @@
+package ex06;
+
+public class Airplane {
+
+	@Autowired
+	@Qualifier("bat")
+	private IBattery battery;
+
+	public IBattery getBattery() {
+		return battery;
+	}
+	public void setBattery(IBattery battery) {
+		this.battery = battery;
+	}
+	
+	
+}

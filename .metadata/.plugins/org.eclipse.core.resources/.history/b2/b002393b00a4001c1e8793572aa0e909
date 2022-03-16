@@ -1,0 +1,37 @@
+package ex04;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Printer {
+	
+	/*
+	 * @Autowired -> 자동주입 타입 -> 이름
+	 * 
+	 * 
+	 */
+
+	private Document doc;
+	
+	//기본생성자
+	public Printer() {
+		
+	}
+	
+	//생성자
+	@Autowired
+	public Printer(Document doc) {
+		this.doc = doc;
+	}
+
+
+	public Document getDoc() {
+		return doc;
+	}
+
+	@Autowired
+	public void setDoc(Document doc) {
+		this.doc = doc;
+	}
+	
+	
+}

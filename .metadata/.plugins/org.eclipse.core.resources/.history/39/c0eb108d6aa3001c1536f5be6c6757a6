@@ -1,0 +1,11 @@
+package ex03;
+
+public class DataBaseDev {
+	
+	private String url;
+	private String uid;
+	private String upw;
+	
+	//getter, setter
+	
+}

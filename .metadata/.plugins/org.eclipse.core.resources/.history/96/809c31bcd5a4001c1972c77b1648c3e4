@@ -1,0 +1,27 @@
+package com.simple.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller //컴포넌트 스캔이 읽어서 bean으로 생성한다.
+public class RequestController {
+	
+//	@RequestMapping("/test")
+//	public void test() {
+//		
+//		System.out.println("실행됨");
+//	}
+	
+	//void형 메서드는 들어오는 경로를 그대로 리졸버뷰에 반환합니다.
+//	@RequestMapping("/request/ex01")
+//	public void ex01() {
+//		
+//	}
+	
+	//String형 메서드는 들어가는 경로, 나가는 경로를 각각 지정합니다.
+	@RequestMapping("/request/ex01")
+	public String ex01() {
+		
+		return "request/ex01";
+	}
+}

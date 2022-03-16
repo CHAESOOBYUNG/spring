@@ -1,0 +1,12 @@
+package ex02;
+
+public class MainClass {
+	
+	public static void main(String[] args) {
+		
+		Chef c = new Chef();
+		
+		Hotel h = new Hotel(chef);
+		
+	}
+}

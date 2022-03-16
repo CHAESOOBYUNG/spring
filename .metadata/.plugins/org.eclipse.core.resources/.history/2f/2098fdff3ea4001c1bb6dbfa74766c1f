@@ -1,0 +1,11 @@
+package ex06;
+
+public class MainClass {
+	
+	
+	GenericXmlApplicationContext ctx = 
+			new GenericXmlApplicationContext("autowired-context.xml");
+	
+	Airplane ap = ctx.getBean(Airplane.class);
+	ap.getBattery().energy();
+}

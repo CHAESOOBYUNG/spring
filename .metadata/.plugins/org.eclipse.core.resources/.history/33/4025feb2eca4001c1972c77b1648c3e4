@@ -1,0 +1,11 @@
+package com.simple.command;
+
+import java.util.ArrayList;
+
+public class ReqVO {
+	
+	//
+	private String id;
+	private String age;
+	private ArrayList<String> inter;
+}

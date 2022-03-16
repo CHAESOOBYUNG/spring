@@ -1,0 +1,13 @@
+package ex04;
+
+public class Printer {
+
+	private Document doc;
+	
+	
+	//생성자
+	public Printer(Document doc) {
+		this.doc = doc;
+	}
+	
+}

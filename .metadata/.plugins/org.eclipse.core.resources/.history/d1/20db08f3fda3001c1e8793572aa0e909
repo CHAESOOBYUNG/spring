@@ -1,0 +1,29 @@
+package ex04;
+
+public class Printer {
+
+	private Document doc;
+	
+	//기본생성자
+	public Printer() {
+		
+	}
+	
+	
+	//생성자
+	public Printer(Document doc) {
+		this.doc = doc;
+	}
+
+
+	public Document getDoc() {
+		return doc;
+	}
+
+
+	public void setDoc(Document doc) {
+		this.doc = doc;
+	}
+	
+	
+}

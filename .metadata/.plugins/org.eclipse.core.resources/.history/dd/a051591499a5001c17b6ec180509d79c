@@ -1,0 +1,23 @@
+package com.simple.command;
+
+public class Quiz02VO {
+	
+	private String id;
+	private String pw;
+	private String name;
+	private String email;
+	
+	public Quiz02VO() {
+		
+	}
+	
+	public Quiz02VO(String id, String pw, String name, String email) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.email = email;
+	}
+	
+	
+}

@@ -20,8 +20,13 @@
 	</beans:bean>
 	
 	<!-- 패키지를 읽어서 반으로 생성 -->
-	<context:component-scan base-package="com.simple.controller" />
+	<context:component-scan base-package="com.simple.*" />
+
 	
+	<!-- 서비스를 빈으로 생성 -->
+	<!--  
+	<beans:bean id="xxx" class="com.simple.service.ScoreServiceImpl"/>
+	-->
 	
 	
 </beans:beans>

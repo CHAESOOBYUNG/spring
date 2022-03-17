@@ -1,0 +1,22 @@
+package com.simple.dao;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
+
+import com.simple.command.ScoreVO;
+
+@Repository("aaa") //bean의 id를 aaa로 생성
+public class ScoreDAOImpl implements ScoreDAO {
+	
+	//리스트(데이터베이스 대체)
+	ArrayList<ScoreVO> list = new ArrayList<>();
+	
+	@Override
+	public void regist(ScoreVO vo) {
+		
+		System.out.println("DAO영역 실행됨");
+	}
+}

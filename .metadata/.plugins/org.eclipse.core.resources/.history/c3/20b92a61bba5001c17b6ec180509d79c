@@ -1,0 +1,19 @@
+package com.simple.service;
+
+import org.springframework.stereotype.Service;
+
+import com.simple.command.ScoreVO;
+
+@Service("scoreService") //bean의 id를 scoreService로 생성
+public class ScoreServiceImpl implements ScoreService {
+
+	@Override
+	public void regist(ScoreVO vo) {
+		
+		System.out.println("서비스 실행됨");
+		
+	}
+
+	
+	
+}

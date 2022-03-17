@@ -1,0 +1,35 @@
+package com.simple.controller;
+
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.simple.service.BoardService;
+
+@Controller
+@RequestMapping("/service")
+public class BoardServiceController {
+	
+	@Resource(name="boardService")
+	BoardService boardService;
+	
+	//등록화면
+	@RequestMapping("/boardRegister")
+	public void register() {
+		
+	}
+	
+	//목록화면
+	@RequestMapping("/boardList")
+	public String list(Model model) {
+		
+		ArrayList<BoardVO> list = boardService.getList();
+		model.addAttribute("list",list); //데이터 저장(list 이름)
+		
+		return "service/boardList";
+	}
+}

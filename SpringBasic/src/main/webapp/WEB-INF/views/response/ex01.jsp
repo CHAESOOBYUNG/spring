@@ -16,6 +16,13 @@
 	<a href="ex03">ex03페이지로(모델앤뷰)</a>
 	
 	<a href="ex04?id=aaa123">ex04페이지로(모델어노테이션)</a>
+	
+	<form action="ex05" method="post">
+		id: <input type="text" name="id"><br>
+		age: <input type="text" name="age"><br>
+		<input type="submit" value="모델어노테이션">
+		
+	</form>
 	 
 </body>
 </html>

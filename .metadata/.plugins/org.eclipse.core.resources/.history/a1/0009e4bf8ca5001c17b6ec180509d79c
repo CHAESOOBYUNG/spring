@@ -1,0 +1,13 @@
+package com.simple.command;
+
+public class Quiz01VO {
+	
+	private String year;
+	private String month;
+	private String day;
+	public Quiz01VO() {
+		
+	}
+	
+	
+}

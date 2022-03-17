@@ -1,0 +1,12 @@
+package com.simple.dao;
+
+import com.simple.command.ScoreVO;
+
+public class ScoreDAOImpl implements ScoreDAO {
+	
+	@Override
+	public void regist(ScoreVO vo) {
+		
+		System.out.println("DAO영역 실행됨");
+	}
+}

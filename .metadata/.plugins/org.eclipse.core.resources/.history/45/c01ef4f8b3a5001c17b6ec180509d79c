@@ -1,0 +1,14 @@
+package com.simple.service;
+
+import com.simple.command.ScoreVO;
+
+public class ScoreServiceImpl implements ScoreService {
+
+	@Override
+	public void regist(ScoreVO vo) {
+		
+	}
+
+	
+	
+}

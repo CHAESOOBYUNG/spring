@@ -1,0 +1,24 @@
+package com.simple.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/quiz")
+public class QuizController {
+	
+	//화면처리
+	@RequestMapping("/quiz01")
+	public void quiz01() {
+		
+	}
+	
+	//퀴즈01 폼처리
+	@RequestMapping("/sendBirth")
+	public String sendBirth() {
+		
+		
+		return "quiz/quiz01_ok"; //경로
+	}
+	
+}

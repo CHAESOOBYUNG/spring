@@ -18,7 +18,7 @@
 	--%>
 	
 	<h2>quiz화면(화면 URL요청: /quiz/quiz01)</h2>
-	<form action="birthday" method="post">
+	<form action="sendBirth" method="post">
 		생년월일:<br>
 		<input type="text" name="year" maxlength="4" size="4" placeholder="년(4자)">
 		<select name="month">

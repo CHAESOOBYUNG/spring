@@ -1,0 +1,4 @@
+## 개발DB
+ds.driverClassName=oracle.jdbc.driver.OracleDriver
+ds.jdbcUrl=jdbc:oracle:thin:@localhost:1521/XEPDB1
+ds.username=spring

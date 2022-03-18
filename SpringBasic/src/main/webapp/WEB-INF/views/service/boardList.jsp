@@ -20,17 +20,22 @@
 			<td>비고</td>
 		</tr>
 		
+		<c:forEach var="vo" items="${list}" varStatus="num">
+		
 		<tr>
-			<td>???????</td>
-			<td>???????</td>
-			<td>???????</td>
-			<td>???????</td>
+			<td>번호:${num.index + 1 }</td>
+			<td>작성자:${vo.name }</td>
+			<td>제목:${vo.title }</td>
+			<td>내용:${vo.content }</td>
 			<!-- 
 			1. boardDelete로 삭제 처리하세요. 
 			2. 삭제 후엔 목록화면으로 리다이렉트 하세요.
 			-->
-			<td><input type="button" value="삭제"></td>
+			<td><input type="button" value="삭제" 
+			onclick="location.href='boardDelete?bno=${vo.bno}'">삭제하기</td>
 		</tr>
+		
+		</c:forEach>
 
 	</table>
 	

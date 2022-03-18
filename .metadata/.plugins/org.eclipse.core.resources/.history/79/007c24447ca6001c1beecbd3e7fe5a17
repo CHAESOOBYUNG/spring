@@ -1,0 +1,82 @@
+package com.simple.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.simple.command.BoardVO;
+
+@Repository("boardDAO")
+public class BoardDAOImpl implements BoardDAO {
+	
+	@Autowired
+	DataSource ds;
+	
+	@Override
+	public void boardRegist(BoardVO vo) {
+		
+		//insert
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		String sql = "insert into board values(board_seq.nextval, ?, ?, ?, ?)";
+		
+		try {
+			conn = ds.getConnection();
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getTitle());
+			pstmt.setString(3, vo.getContent());
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+
+
+	@Override
+	public ArrayList<BoardVO> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public void boardDelete(int num) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	/*
+	// 리스트(데이터베이스 대체)
+	ArrayList<BoardVO> list = new ArrayList<>();
+
+	@Override
+	public void boardRegist(BoardVO vo) {
+		// 데이터 연결
+		list.add(vo);
+	}
+
+	@Override
+	public ArrayList<BoardVO> getList() {
+		return list;
+	}
+
+	@Override
+	public void boardDelete(int num) {
+		list.remove(num); //삭제
+	}
+	*/
+	
+}

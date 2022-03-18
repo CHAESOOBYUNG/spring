@@ -1,0 +1,16 @@
+package com.simple.command;
+
+public class ScoreVO {
+	
+	private int num; //+추가
+	private String name;
+	private int kor;
+	private int eng;
+	private int math;
+	
+	public ScoreVO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+}

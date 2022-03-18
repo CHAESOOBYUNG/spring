@@ -1,0 +1,10 @@
+--score
+create table score(
+    num number(10) primary key,
+    name varchar2(30),
+    kor number(3),
+    eng number(3),
+    math number(3)
+);
+
+create SEQUENCE score_seq INCREMENT by 1 start with 1 nocache;

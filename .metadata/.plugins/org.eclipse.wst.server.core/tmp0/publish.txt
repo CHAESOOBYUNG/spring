@@ -1,5 +1,5 @@
 #Tomcat publish data
-#Thu Mar 17 17:30:41 KST 2022
+#Fri Mar 18 16:49:50 KST 2022
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Chae\ Soobyung\\.m2\\repository\\org\\springframework\\spring-web\\5.2.10.RELEASE\\spring-web-5.2.10.RELEASE.jar=C\:\\Users\\Chae Soobyung\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringMake\\WEB-INF\\lib\\spring-web-5.2.10.RELEASE.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Chae\ Soobyung\\.m2\\repository\\org\\springframework\\spring-web\\5.0.7.RELEASE\\spring-web-5.0.7.RELEASE.jar=C\:\\Users\\Chae Soobyung\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringBasic\\WEB-INF\\lib\\spring-web-5.0.7.RELEASE.jar
 org.eclipse.jst.jee.server\:SpringBasic=C\:\\Users\\Chae Soobyung\\Desktop\\course\\spring\\apache-tomcat-8.5.76\\wtpwebapps\\SpringBasic

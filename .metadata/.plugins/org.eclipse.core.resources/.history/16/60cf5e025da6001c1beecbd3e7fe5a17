@@ -1,0 +1,19 @@
+package com.simple.basic;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class) //스프링 JUnit의 테스트 환경을 잡아준다.
+@ContextConfiguration("file:src/main/webapp/WEB-INF/config/root-context.xml")
+public class JDBCBasic {
+	
+	@Test
+	public void test01() {
+		System.out.println("test환경");
+	}
+	
+	
+	
+}

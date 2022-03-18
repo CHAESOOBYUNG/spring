@@ -1,0 +1,32 @@
+package com.simple.controller;
+
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.simple.service.BoardService;
+
+@Controller
+@RequestMapping("/service")
+public class BoardServiceController {
+	
+	//boardRegister 화면처리
+	@RequestMapping("/boardRegister")
+	public void boardRegister() {
+		
+	}
+	
+	//boardRegister 폼처리
+	
+	@RequestMapping(value="/boardForm" method=RequestMethod.POST)
+	public String boardForm() {
+		
+		return null;
+	}
+	
+	
+}

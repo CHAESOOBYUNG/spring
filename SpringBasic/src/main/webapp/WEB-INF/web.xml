@@ -10,11 +10,9 @@
 		<param-value>/WEB-INF/config/root-context.xml</param-value>
 	</context-param>
 
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<!-- 1. 스프링이 시작되면서 리스너 객체가 생성되고, 위에 선언된 root-context.xml이 전역설정파일로 등록. -->
 	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener
-		</listener-class>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
 	<!-- Processes application requests -->

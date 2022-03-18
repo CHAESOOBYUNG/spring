@@ -1,0 +1,52 @@
+package com.simple.controller;
+
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.simple.command.BoardVO;
+import com.simple.service.BoardService;
+
+@Controller
+@RequestMapping("/service")
+public class BoardServiceController {
+	
+	@Autowired
+	@Qualifier("boardService")
+	BoardService boardService;
+	
+	//boardRegister 화면처리
+	@RequestMapping("/boardRegister")
+	public void boardRegister() {
+		
+	}
+	
+	//화면치리
+	@RequestMapping("/boardResult")
+	public void boardResult() {
+		
+	}
+	
+	@RequestMapping("/boardList")
+	public void boardList() {
+		
+	}
+	
+	//boardRegister 폼처리
+	@RequestMapping(value="/boardForm", method=RequestMethod.POST)
+	public String boardForm(BoardVO vo) {
+		
+		boardService.boardRegist(vo);
+		
+		return "redirect:/service/boardResult";
+	}
+	
+	
+}

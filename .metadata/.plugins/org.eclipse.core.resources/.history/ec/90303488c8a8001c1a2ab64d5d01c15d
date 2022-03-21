@@ -1,0 +1,13 @@
+package com.simple.test.mapper;
+
+import java.util.ArrayList;
+
+import com.simple.command.ScoreVO;
+
+public interface TestMapper {
+	
+	public String getTime(); //테스트 메서드
+	public ArrayList<ScoreVO> getScore(); //테스트메서드
+	
+	public int insertOne(String name); //단일 값 전달
+}

@@ -6,9 +6,4 @@ INDEX VERSION 1.4+C:\Users\Chae Soobyung\Desktop\course\spring\workspace\.metada
 2126941413.index
 2386460925.index
 3307818138.index
-2057559404.index
-3798917348.index
-2658272158.index
 497162892.index
-946140585.index
-4185217568.index

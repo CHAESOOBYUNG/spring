@@ -1,0 +1,56 @@
+package com.simple.basic;
+
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.simple.command.ScoreVO;
+import com.simple.test.mapper.TestMapper;
+
+@RunWith(SpringJUnit4ClassRunner.class) //스프링 JUnit의 테스트 환경을 잡아준다.
+@ContextConfiguration("file:src/main/webapp/WEB-INF/config/root-context.xml") //root-context를 스프링 설정파일로 참조
+public class MybatisBasic {
+	
+	@Autowired
+	TestMapper testMapper;
+	
+//	@Test
+//	public void test() {
+//		
+//		String result = testMapper.getTime();
+//		System.out.println(result);
+//	}
+	
+//	@Test
+//	public void test2() {
+//		ArrayList<ScoreVO> list = testMapper.getScore();
+//		System.out.println(list.toString());
+//	}
+	
+	//insert방법
+//	@Test
+//	public void insertOne() {
+//		
+//		//단일값 - 
+//		int result = testMapper.insertOne("김지원");
+//		System.out.println("성공실패결과" + result);
+//		
+//	}
+	
+	//insert방법 - 다중값(vo나 맵)
+	@Test
+	public void insertTwo() {
+		
+		ScoreVO vo = new ScoreVO(0, "김지원", 200, 300, 400);
+		
+		int result= testMapper.insertTwo(vo);
+		System.out.println("성공실패결과:" + result);
+	}
+	
+	
+}

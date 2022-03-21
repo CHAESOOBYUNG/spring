@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<!-- namespace에는 구현인터페이스의 위치가 들어갑니다 -->
+<!-- mybatis스캔을 통해서 인터페이스의 경로를 읽도록 선언 -->
+<mapper namespace="com.simple.test.mapper.TestMapper">
+  	
+  	<!-- id속성에는 인터페이스의 메서드명을 적습니다 -->
+	<select id="getTime" resultType="string">
+		select sysdate from dual
+	</select>
+	
+	<!-- resultType에는 반환받을 VO의 경로가 들어갑니다. -->
+	<!-- 마이바티스 설정시 단축명으로 적용가능합니다. -->
+	<select id="getScore" resultType="ScoreVO">
+		select * from score
+	</select>
+	
+	<!-- 단일값은 인터페이스의 매개변수명을 따라갑니다 -->
+	<insert id="insertOne">
+		insert into score(num, name) 
+		values(score_seq.nextval, #{name})
+	</insert>
+	
+	<insert id="insertTwo">
+		insert into score
+		values(score_seq.nextval, #{name}, #{kor}, #{eng}, #{math})
+	</insert>
+  	
+</mapper>

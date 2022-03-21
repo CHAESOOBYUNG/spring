@@ -1,0 +1,6 @@
+package com.simple.test.mapper;
+
+public interface TestMapper {
+	
+	public String getTime(); //테스트 메서드
+}

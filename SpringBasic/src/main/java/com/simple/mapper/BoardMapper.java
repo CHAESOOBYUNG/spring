@@ -6,7 +6,7 @@ import com.simple.command.BoardVO;
 
 public interface BoardMapper {
 	
-	public void regist(BoardVO vo);
+	public void boardRegist(BoardVO vo);
 	public ArrayList<BoardVO> getList(); //조회
-	public void delete(int bno); //삭제
+	public void boardDelete(int bno); //삭제
 }

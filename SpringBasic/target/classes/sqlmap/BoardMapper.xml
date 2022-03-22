@@ -6,15 +6,15 @@
   
 <mapper namespace="com.simple.mapper.BoardMapper">
 	
-	<insert id="regist">
+	<insert id="boardRegist">
 		insert into board values (board_seq.nextval, #{name}, #{title}, #{content})
 	</insert>
 	
-	<select id="getList" resultType="BoardVO">
+	<select id="getList" resultType="com.simple.command.BoardVO">
 		select * from board
 	</select>
 	
-	<delete id="delete">
+	<delete id="boardDelete">
 		delete from board where bno = #{bno}
 	</delete>
 </mapper>  

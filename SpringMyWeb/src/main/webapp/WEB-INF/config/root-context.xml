@@ -42,9 +42,10 @@
 	</bean>
 
 	<!-- 마이바티스 인터페이스를 읽도록 처리 -->
-	<!-- 
-	<mybatis-spring:scan base-package="com.coding404.test.mapper"/>
-	-->
+	<mybatis-spring:scan base-package="com.coding404.**.service"/>
+	
+	
+	
 
 </beans>
 	

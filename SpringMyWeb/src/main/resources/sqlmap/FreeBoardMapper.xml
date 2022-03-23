@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.coding404.freeboard.service.FreeBoardMapper">
+  	
+  	<insert id="regist">
+  		insert into freeboard(bno, writer, title, content)
+  		values(freeboard_seq.nextval, #{writer}, #{title}, #{content})
+  	</insert>
+  	
+  	<select id="getList" resultType="FreeBoardVO">
+  		select * from freeboard order by bno desc
+  	</select>
+  	
+  	<select id="getContent" resultType="FreeBoardVO">
+  		select * from freeboard where bno = #{bno}
+  	</select>
+  	
+  	<update id="update">
+  		update freeboard 
+  		set title=#{title},
+  		 	content=#{content},
+  		 	updatedate = sysdate
+  		where bno = #{bno}
+  	</update>
+  	
+  	<delete id="delete">
+  		delete freeboard
+  		where bno = #{bno}
+  	</delete>
+  </mapper>

@@ -1,9 +1,0 @@
-package com.simple.command;
-
-public class ReqVO {
-	
-	//
-	private String id;
-	private String age;
-	private ArraysList<String> inter;
-}

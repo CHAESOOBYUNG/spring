@@ -6,6 +6,6 @@
 <!-- 마이바티스의 부가설정(VO의 단축명 지정) -->
 <configuration>
 	<typeAliases>
-		
+		<typeAlias type="com.coding404.command.FreeBoardVO" alias="FreeBoardVO"/>
 	</typeAliases>
 </configuration>

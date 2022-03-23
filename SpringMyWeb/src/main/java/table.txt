@@ -1,0 +1,19 @@
+create table freeboard(
+    bno number(10) primary key,
+    title varchar2(300) not null,
+    writer varchar2(50) not null,
+    content varchar2(2000),
+    regdate date default sysdate, --현재시간
+    updatedate date default sysdate
+);
+create sequence freeboard_seq INCREMENT by 1 start with 1 nocache;
+
+
+select *
+from (select rownum rn,
+             a.*
+      from (select * 
+            from freeboard 
+            order by bno desc) a
+)
+where rn > 10 and rn <= 20;

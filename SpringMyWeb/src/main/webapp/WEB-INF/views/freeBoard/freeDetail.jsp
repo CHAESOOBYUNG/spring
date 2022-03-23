@@ -12,28 +12,28 @@
                         <form>
                             <div>
                                 <label>DATE</label>
-                                <p>2019-12-12</p>
+                                <p>${vo.regdate }</p>
                             </div>   
                             <div class="form-group">
                                 <label>번호</label>
-                                <input class="form-control" name='##' readonly>
+                                <input class="form-control" name='##' value="${vo.bno }" readonly>
                             </div>
                             <div class="form-group">
                                 <label>작성자</label>
-                                <input class="form-control" name='##' readonly>
+                                <input class="form-control" name='##' value="${vo.writer }" readonly>
                             </div>    
                             <div class="form-group">
                                 <label>제목</label>
-                                <input class="form-control" name='##' readonly>
+                                <input class="form-control" name='##' value="${vo.title }" readonly>
                             </div>
 
                             <div class="form-group">
                                 <label>내용</label>
-                                <textarea class="form-control" rows="10" name='##' readonly></textarea>
+                                <textarea class="form-control" rows="10" name='##' value="${vo.content }" readonly></textarea>
                             </div>
 
-                            <button type="button" class="btn btn-primary">변경</button>
-                            <button type="button" class="btn btn-dark">목록</button>
+                            <button type="button" class="btn btn-primary" onclick="location.href='freeModify?bno=${vo.bno}'">변경</button>
+                            <button type="button" class="btn btn-dark" onclick="location.href='freeList'">목록</button>
                     </form>
                 </div>
             </div>

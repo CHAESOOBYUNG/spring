@@ -2,32 +2,75 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-  <mapper namespace="com.coding404.freeboard.service.FreeBoardMapper">
-  	
-  	<insert id="regist">
-  		insert into freeboard(bno, writer, title, content)
-  		values(freeboard_seq.nextval, #{writer}, #{title}, #{content})
-  	</insert>
-  	
-  	<select id="getList" resultType="FreeBoardVO">
-  		select * from freeboard order by bno desc
-  	</select>
-  	
-  	<select id="getContent" resultType="FreeBoardVO">
-  		select * from freeboard where bno = #{bno}
-  	</select>
-  	
-  	<update id="update">
-  		update freeboard 
-  		set title=#{title},
-  		 	content=#{content},
-  		 	updatedate = sysdate
-  		where bno = #{bno}
-  	</update>
-  	
-  	<delete id="delete">
-  		delete freeboard
-  		where bno = #{bno}
-  	</delete>
-  </mapper>
+
+<mapper
+	namespace="com.coding404.freeboard.service.FreeBoardMapper">
+
+	<insert id="regist">
+		insert into freeboard(bno, writer, title, content)
+		values(freeboard_seq.nextval, #{writer}, #{title}, #{content})
+	</insert>
+
+
+	<!-- CDATA로 감싼 값을 순수한 문자열의 형태로 인식시킴 -->
+	<!-- 동적쿼리의 test에는 조건을 만들고, 전달되는 vo의 getter(변수명)을 사용할 수 있습니다. -->
+	<select id="getList" resultType="FreeBoardVO">
+	 	<![CDATA[
+		select *
+		from (select rownum rn,
+					 a.*
+			  from (select *
+					from freeboard
+		]]>			
+					  
+					<if test="searchType == 'title' ">where title like '%' || #{searchName} || '%'</if>
+					<if test="searchType == 'writer' ">where writer like '%' || #{searchName} || '%'</if>
+					<if test="searchType == 'content' ">where content like '%' || #{searchName} || '%'</if>
+					<if test="searchType == 'titcont' ">where title like '%' || #{searchName} || '%' or content like '%' || #{searchName} || '%' </if>
+					<if test="searchType == null or searchType == '' ">where 1 = 1</if>
+					<!--
+					<choose>
+						<when test="searchType == 'title'">where title like '%' || #{searchName} || '%'</when>
+						<when test="searchType == 'writer'">where writer like '%' || #{searchName} || '%'</when>
+						<when test="searchType == 'content'">where content like '%' || #{searchName} || '%'</when>
+						<when test="searchType == 'titcont'">where titcont like '%' || #{searchName} || '%' or content like '%' || #{searchName} || '%' </when>
+						<otherwise>where 1 = 1</otherwise>
+					</choose>
+					-->
+					
+		<![CDATA[		
+					order by bno desc) a
+		)
+		where rn > (#{pageNum}-1) * #{amount} and rn <= #{pageNum} * #{amount}
+		]]>
+	</select>
+
+	<!-- 전체 게시글 수 -->
+	<select id="getTotal" resultType="int">
+	
+		select count(*) as total from freeboard	
+		<if test="searchType == 'title' ">where title like '%' || #{searchName} || '%'</if>
+		<if test="searchType == 'writer' ">where writer like '%' || #{searchName} || '%'</if>
+		<if test="searchType == 'content' ">where content like '%' || #{searchName} || '%'</if>
+		<if test="searchType == 'titcont' ">where title like '%' || #{searchName} || '%' or content like '%' || #{searchName} || '%' </if>
+		<if test="searchType == null or searchType == '' ">where 1 = 1</if>
+	
+	</select>
+
+	<select id="getContent" resultType="FreeBoardVO">
+		select * from freeboard where bno = #{bno}
+	</select>
+
+	<update id="update">
+		update freeboard
+		set title=#{title},
+		content=#{content},
+		updatedate = sysdate
+		where bno = #{bno}
+	</update>
+
+	<delete id="delete">
+		delete freeboard
+		where bno = #{bno}
+	</delete>
+</mapper>

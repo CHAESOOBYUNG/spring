@@ -1,8 +1,0 @@
-package com.simple.command;
-
-public class ScoreVO {
-	
-	private String name;
-	private String kor;
-	private 
-}

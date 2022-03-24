@@ -17,3 +17,16 @@ from (select rownum rn,
             order by bno desc) a
 )
 where rn > 10 and rn <= 20;
+
+
+select *
+from (select rownum rn,
+             a.*
+      from (select * 
+            from freeboard 
+            --where title like '%' || '%test%' || '%'
+            --where writer like '%test%'
+            --where title like '%test%' or content like '%test%'
+            order by bno desc) a
+)
+where rn > 0 and rn <= 20;

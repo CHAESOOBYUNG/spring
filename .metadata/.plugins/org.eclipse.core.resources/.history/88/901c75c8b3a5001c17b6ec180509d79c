@@ -1,6 +1,0 @@
-package com.simple.service;
-
-public interface ScoreService {
-	
-	public void regist(ScoreVO vo);
-}

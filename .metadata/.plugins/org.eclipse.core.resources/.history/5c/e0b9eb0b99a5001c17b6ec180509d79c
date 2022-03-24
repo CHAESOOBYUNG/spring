@@ -1,9 +1,0 @@
-package com.simple.command;
-
-public class Quiz02VO {
-	
-	private String id;
-	private String pw;
-	private String name;
-	private String email;
-}
